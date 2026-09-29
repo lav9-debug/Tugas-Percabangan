@@ -1,0 +1,122 @@
+using System;
+namespace MasukITS
+{
+    class Home
+    {
+        static void Main(string[] args)
+        {
+            bool ulang = true;
+            while(ulang)
+            {
+                
+                Console.WriteLine("Hitung Nilai Masuk ITS");
+                Console.WriteLine("Ketik 1 untuk Hitung Nilai TKA Melalui Jalur Prestasi");
+                Console.WriteLine("Ketik 2 untuk Jalur Kedua Masuk ITS Melalui UTBK");
+                Console.WriteLine("Ketik 0 untuk Keluar");
+
+
+                int pilihan = Convert.ToInt32(Console.ReadLine());
+                Console.Write(pilihan);
+
+                
+
+                if (pilihan == 1)
+                {
+                    Milih.milih();
+                }
+                if (pilihan == 2)
+                {
+                    UTBK.utbk();
+                }
+                else if (pilihan == 0)
+                {
+                    
+                    ulang = false;
+                    
+                }
+            }
+
+        }
+        class Milih
+        {
+            public static void milih()
+            {
+                Console.Clear();
+
+                Console.WriteLine("Berapa Nilai Matematika Anda?");
+                int matematika = Convert.ToInt32(Console.ReadLine());
+                Console.Write(matematika);
+
+                Console.Clear();
+                Console.WriteLine("Berapa Nilai Bahasa Inggris Anda?");
+                int bahasainggris = Convert.ToInt32(Console.ReadLine());
+                Console.Write(bahasainggris);
+
+                Console.Clear();
+                Console.WriteLine("Berapa Nilai Pilihan Anda?");
+                int Pilihan = Convert.ToInt32(Console.ReadLine());
+                Console.Write(Pilihan);
+
+                Console.Clear();
+                int totalNilai = matematika + bahasainggris + Pilihan;
+
+                Console.WriteLine("Total Nilai Anda Adalah : " + totalNilai);
+
+                if (totalNilai >= 282)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Selamat Anda Lulus ITS");
+                }
+                else if (totalNilai >= 282)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Ada tidak Lulus ITS");
+                }
+                else
+                {
+                    Console.WriteLine("Anda Tidak Lulus Coba lagi");
+                }
+            }
+        }
+        class UTBK
+        {
+            public static void utbk()
+            {
+                
+         
+                Console.Clear();
+                Console.WriteLine("Berapa Nilai Matematika Anda?");
+                int matematika = Convert.ToInt32(Console.ReadLine());
+
+                Console.Clear();
+                Console.WriteLine("Berapa Nilai Bahasa Inggris Anda?");
+                int bahasainggris = Convert.ToInt32(Console.ReadLine());
+
+                Console.Clear();
+                Console.WriteLine("Berapa Nilai Pilihan Anda?");
+                int Pilihan = Convert.ToInt32(Console.ReadLine());
+
+                Console.Clear();
+                double totalNilai = matematika + bahasainggris + Pilihan;
+                double totalNilai1 = totalNilai * 1.30;
+                double PassingGrade = 600.0;
+                double NilaiYangDibutuhkan = PassingGrade - totalNilai1;
+
+                Console.WriteLine("Total Nilai TKA (+30%) : " + totalNilai1);
+                Console.WriteLine("Nilai UTBK Dibutuhkan : " + NilaiYangDibutuhkan);
+
+                if (totalNilai1 >= 600)
+                {
+                    
+                    Console.WriteLine("Selamat Anda Lulus");
+                }
+                else
+                {
+                    double kurang = 600 - totalNilai1;
+                    Console.WriteLine("Maaf Anda Belum Lulus, kurang " + kurang + " poin lagi.");
+                }
+            }
+        }
+           
+    }
+}
