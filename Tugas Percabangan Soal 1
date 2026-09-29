@@ -1,0 +1,78 @@
+using System;
+namespace Tugas_Percabangan
+{
+    class Home
+    {
+        static void Main(string[] args)
+        {
+            int Buku1 = 100;
+            int Buku2 = 200;
+            int Buku3 = 300;
+            int Bulpen1 = 500;
+            int Bulpen2 = 500;
+
+            // totaldiskon hasil dari persenan jumlah 1600 contoh : 30% dari 1600 adalah 480
+            int totalbayar = Buku1 + Buku2 + Buku3 + Bulpen1 + Bulpen2;
+            double totaldiskon = 0.30;
+
+            int totalbayarBuku1 = totalbayar - Buku1;
+            double totaldiskon1 = 0.20;
+
+            int totalbayarBuku2 = totalbayar - Buku2;
+            double totaldiskon2 = 0.20;
+            
+            int totalbayarBuku3 = totalbayar - Buku3;
+            double totaldiskon3 = 0.20;
+            
+            string diskon = "Tidak Mendapatkan Diskon";
+
+            if (totalbayar == totalbayar)
+            {
+                
+                // Jika Totalbayar dan totaldiskon dikali *
+                double totalsemua = totalbayar * totaldiskon;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dikali * = " + totalsemua);
+                // Jika Totalbayar dan totaldiskon dibagi /
+                double totalsemua1 = totalbayar / totaldiskon;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dibagi / = " + totalsemua1);
+                diskon = "30%";
+            }
+            else if (totalbayarBuku1 == totalbayarBuku1)
+            {
+                // Jika Totalbayar dan totaldiskon dikali *
+                double totalsemua = totalbayarBuku1 * totaldiskon1;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dikali * = " + totalsemua);
+                // Jika Totalbayar dan totaldiskon dibagi /
+                double totalsemua1 = totalbayarBuku1 / totaldiskon1;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dibagi / = " + totalsemua1);
+                diskon = "20%";
+            }
+            else if (totalbayarBuku2 == totalbayarBuku2)
+            {
+                // Jika Totalbayar dan totaldiskon dikali *
+                double totalsemua = totalbayarBuku2 * totaldiskon2;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dikali * = " + totalsemua);
+                // Jika Totalbayar dan totaldiskon dibagi /
+                double totalsemua1 = totalbayarBuku2 / totaldiskon2;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dibagi / = " + totalsemua1);
+                diskon = "20%";
+            }
+            else if (totalbayarBuku3 == totalbayarBuku3)
+            {
+                // Jika Totalbayar dan totaldiskon dikali *
+                double totalsemua = totalbayarBuku3 * totaldiskon3;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dikali * = " + totalsemua);
+                // Jika Totalbayar dan totaldiskon dibagi /
+                double totalsemua1 = totalbayarBuku3 / totaldiskon3;
+                Console.WriteLine("Hasil totalbayar dan totaldiskon dibagi / = " + totalsemua1);
+                diskon = "20%";
+            }                                                                               
+
+            Console.WriteLine("Totalbayar = " + totalbayar + " dan diskon = " + diskon);
+            Console.WriteLine("Totalbayar = " + totalbayarBuku1 + " dan diskon = " + diskon);
+            Console.WriteLine("Totalbayar = " + totalbayarBuku2 + " dan diskon = " + diskon);
+            Console.WriteLine("Totalbayar = " + totalbayarBuku3 + " dan diskon = " + diskon);
+            
+        }
+    }
+}
